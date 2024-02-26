@@ -1,0 +1,54 @@
+.searchPanel form {
+  background-color: #1a1a1a;
+  outline: 0.0625rem solid var(--border-primary-color);
+  display: flex;
+  padding: 0.4rem 0;
+  width: 100%;
+}
+.searchPanel form:focus-within {
+  outline: 0.25rem double var(--border-primary-color);
+}
+.searchPanel input {
+  background-color: inherit;
+  border: 0;
+  border-left: 0.0625rem solid #333;
+  border-right: 0.0625rem solid #333;
+  font-size: 1.5rem;
+  color: #e6e6e6;
+  padding: 0 0.5rem;
+  width: 100%;
+}
+.searchPanel input:focus-visible {
+  outline: 0;
+}
+.searchPanel input::selection {
+  background: #fff;
+  color: #000;
+}
+.searchPanel input::placeholder {
+  font-family: var(--ubuntu);
+  color: #8f8f8f;
+}
+.searchPanelButton {
+  background-color: transparent;
+  border: 0;
+  fill: var(--accent-color);
+  padding: 0;
+  outline: 0;
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+.searchPanelButton:hover > svg {
+  fill: #fff;
+}
+.searchPanelButton:active > svg {
+  fill: #fff;
+}
+.buttonDisabled {
+  fill: #4d4d4d;
+}
+.searchPanelButton > svg {
+  display: inline-block;
+  font-size: 0;
+  width: 1.625rem;
+}

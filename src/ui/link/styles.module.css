@@ -1,0 +1,32 @@
+.link {
+  font-size: 1.25em;
+  cursor: pointer;
+  position: relative;
+  min-height: 0;
+  white-space: nowrap;
+}
+.link [lang='ja'] {
+  visibility: hidden;
+  transform: translateY(-100%);
+}
+.linkButton {
+  color: var(--text-primary-color);
+  line-height: 2rem;
+  padding: 0 0.75rem;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  outline: 0.0625rem solid var(--border-primary-color);
+  min-width: 6.75rem;
+  height: 2.25rem;
+}
+.linkButton:hover {
+  outline: 0.25rem double var(--border-primary-color);
+}
+.linkButton:hover [lang='ja'] {
+  visibility: visible;
+}
+.linkButton:hover [lang='en'] {
+  visibility: hidden;
+}

@@ -1,95 +1,65 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Search from '@/ui/search-panel'
+import './page.scss'
 
-export default function Home() {
+export default function Page() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
+    <>
+      <search role="search">
+        <Search />
+      </search>
+
+      <article style={{ margin: '2rem auto', maxWidth: '38rem' }}>
         <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
+          Jisho is a powerful Japanese-English dictionary. It lets you find words and kanji quickly
+          and easily.
         </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+        <p>
+          Enter any Japanese or English word in the search box and Jisho will search a myriad of
+          data for you.
+        </p>
+        <p>Here’s a few example searches to give you a taste of what Jisho can do.</p>
+        <ul>
+          <li>
+            Great English search: <a href="/">house</a>
+          </li>
+          <li>
+            Inflection information:{' '}
+            <a href="/">
+              <span lang="ja">走った</span>
+            </a>
+          </li>
+          <li>
+            Multi word search:{' '}
+            <a href="/">
+              <span lang="ja">日</span> sunlight
+            </a>
+          </li>
+          <li>
+            JLPT N3 adjectives: <a href="/">#jlpt-n3 #adjective</a>
+          </li>
+          <li>
+            Grade 1 jōyō kanji: <a href="/">#grade:1 #kanji</a>
+          </li>
+          <li>
+            Common words that end with <span lang="ja">家</span>:{' '}
+            <a href="/">
+              #word #common ?*<span lang="ja">家</span>
+            </a>
+          </li>
+          <li>
+            Convert Japanese years:{' '}
+            <a href="/">
+              <span lang="ja">昭和５２</span>
+            </a>
+          </li>
+          <li>
+            Convert Japanese numbers:{' '}
+            <a href="/">
+              <span lang="ja">４７７８万</span>
+            </a>
+          </li>
+        </ul>
+      </article>
+    </>
+  )
 }

@@ -1,0 +1,55 @@
+.novels-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  max-width: 18rem;
+
+  &__item {
+    color: #ccc;
+    margin: 0.125em 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  &__link {
+    cursor: pointer;
+    text-decoration: underline;
+
+    &:hover {
+      color: #cc0000;
+    }
+  }
+}
+
+.novels-content {
+  padding: 0 2rem;
+
+  &__original-title,
+  &__title {
+    text-align: center;
+    margin: 0 auto;
+    width: 60%;
+  }
+
+  &__original-title {
+    font-size: 1.625em;
+    font-weight: bold;
+    white-space: pre;
+  }
+
+  &__title {
+    font-size: 1.125em;
+  }
+
+  &__novels {
+    margin: 0 auto;
+    max-width: 120rem;
+    white-space: pre-wrap;
+  }
+}
+
+.novels-footer {
+  height: 1rem;
+}

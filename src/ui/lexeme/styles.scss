@@ -1,0 +1,91 @@
+.lexeme {
+  border-bottom: 0.0625rem solid #333;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  padding: 0.5rem 0;
+
+  &__view-container {
+    max-width: 20%;
+  }
+
+  &__view {
+    border: 0.0625rem solid #333;
+    border-radius: 0.3125rem;
+    background-color: #0a0a0a;
+    display: flex;
+    align-items: flex-end;
+    text-align: left;
+    padding: 0.3125rem 0.625rem;
+    height: max-content;
+    width: fit-content;
+    white-space: nowrap;
+  }
+
+  &__character-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    word-break: keep-all;
+  }
+
+  &__character {
+    font-size: 2.25em;
+  }
+
+  &__furigana {
+    font-size: 0.875em;
+    width: min-content;
+    word-break: keep-all;
+  }
+
+  &__kana {
+    font-size: 1.875em;
+  }
+
+  &__meanings {
+    flex-basis: 78%;
+    margin-left: auto;
+  }
+
+  &__meaning-tag {
+    color: var(--text-secondary-color);
+    font-size: 0.875em;
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  &__number-tag {
+    color: var(--text-secondary-color);
+    font-size: 0.875em;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3125rem;
+    margin-top: 0.5rem;
+    max-width: 100%;
+    font-size: 0.875rem;
+
+    > * {
+      background-color: hsl(162, 80%, 50%);
+      border: 0.0625rem solid #333;
+      border-radius: 0.3125rem;
+      color: #0a0a0a;
+      padding: 0.125rem 0.25rem;
+
+      &[data-tag-name^='<'] {
+        background-color: hsl(54, 100%, 93%);
+      }
+
+      &[data-tag-name^='jlpt'] {
+        background-color: hsl(48, 100%, 49%);
+      }
+    }
+  }
+}

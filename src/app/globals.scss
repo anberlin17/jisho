@@ -1,0 +1,59 @@
+@import '_normalize';
+
+:root {
+  --text-primary-color: hsl(0, 0%, 93%);
+  --text-secondary-color: hsl(0, 0%, 63%);
+  --accent-color: #aaa;
+  --border-primary-color: #aaa;
+
+  background-color: #000;
+  color: var(--text-primary-color);
+  font-synthesis: none;
+  font-kerning: normal;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+[lang='ja'] {
+  font-family: var(--noto-sans-jp);
+}
+
+header {
+  margin: 0.625rem auto;
+  max-width: 67.5rem;
+}
+
+main {
+  min-height: 100vh;
+  max-width: 67.5rem;
+  margin: 0 auto;
+}
+
+p {
+  font-size: 1.25rem;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+}
+
+label {
+  margin-right: 0.625rem;
+}

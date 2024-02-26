@@ -1,0 +1,9 @@
+.btn-group {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+
+  &_column {
+    flex-direction: column;
+  }
+}
